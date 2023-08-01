@@ -204,12 +204,26 @@ function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+   let tablaSeis= [];
+
+   for(let i = 0; i <= 10; i++){
+      tablaSeis.push(6 * i );
+   }
+   return tablaSeis
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+   nuevoArray = [];
+
+   for( let i = 0; i < array.length; i++){
+      if(array[i] > 100){
+         nuevoArray.push(array[i])
+      }
+   }
+   return nuevoArray;
 }
 
 /* ----------------------------------------------------------------------------------
@@ -223,6 +237,19 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   let nuevoArreglo = [];
+   let suma = num;
+
+   for(let i = 0; i < 10; i++){
+      suma += 2;
+      nuevoArreglo.push(suma)
+      if(suma === i){
+         return("Se interrumpió la ejecución")
+         break;
+      }
+   }
+   return nuevoArreglo;
+
 }
 
 function continueStatement(num) {
@@ -232,6 +259,19 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+
+   let arregloNuevo = [];
+   let suma = num;
+
+   for( let i = 0; i<10; i++){
+      if(i == 5){
+         continue
+      }else{
+         suma += 2;
+         arregloNuevo.push(suma)
+      }
+   }
+   return arregloNuevo;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
